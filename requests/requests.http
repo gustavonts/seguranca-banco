@@ -1,7 +1,7 @@
 @baseUrl = http://localhost:3000
 
 # @name authLogin
-POST {{baseUrl}}/
+GET {{baseUrl}}/
 Content-Type: application/json
 
 {
