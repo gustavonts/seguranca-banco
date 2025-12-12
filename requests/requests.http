@@ -1,10 +1,19 @@
 @baseUrl = http://localhost:3000
 
-# @name authLogin
-GET {{baseUrl}}/
+### Executar varredura de segurança
+POST {{baseUrl}}/scanner/escanear
 Content-Type: application/json
 
 {
- 
- 
+  "host": "localhost",
+  "port": 5432,
+  "database": "postgres",
+  "user": "postgres",
+  "password": "senha"
 }
+
+### Obter todos os resultados
+GET {{baseUrl}}/scanner/resultados
+
+### Gerar relatório
+GET {{baseUrl}}/reports
