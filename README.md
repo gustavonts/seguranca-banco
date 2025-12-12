@@ -38,8 +38,16 @@ GET /scanner/resultados
 GET /reports
 ```
 
-## Verificações
+## Verificações Realizadas
 
-- Lista de usuários do sistema
-- Verificação de múltiplos superusuários
-- Lista de extensões instaladas
+1. **Versão do PostgreSQL** - Identifica a versão instalada
+2. **Superusuários** - Detecta múltiplas contas com privilégios elevados (Risco: Alta)
+3. **Usuários do Sistema** - Lista todos os usuários cadastrados
+4. **Permissões do Schema Público** - Verifica permissões excessivas (Risco: Alta)
+5. **Extensões Instaladas** - Lista todas as extensões do banco
+
+## Classificação de Risco
+
+- **Alta**: Vulnerabilidades críticas que requerem atenção imediata
+- **Média**: Vulnerabilidades que devem ser corrigidas
+- **Baixa**: Informações e verificações gerais

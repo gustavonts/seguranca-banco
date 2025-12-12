@@ -9,11 +9,20 @@ Content-Type: application/json
   "port": 5432,
   "database": "postgres",
   "user": "postgres",
-  "password": "senha"
+  "password": "postgres"
 }
 
 ### Obter todos os resultados
 GET {{baseUrl}}/scanner/resultados
 
-### Gerar relatório
+### Gerar relatório (JSON)
 GET {{baseUrl}}/reports
+
+### Gerar relatório em texto
+GET {{baseUrl}}/reports/texto
+
+### Gerar relatório em JSON estruturado
+GET {{baseUrl}}/reports/json
+
+### Gerar relatório de uma varredura específica (substitua scan_1234567890 pelo ID real)
+GET {{baseUrl}}/reports/scan_1234567890
