@@ -12,21 +12,4 @@ export class ReportsController {
       relatorio: this.reportsService.gerarRelatorio(),
     };
   }
-
-  @Get('texto')
-  @Header('Content-Type', 'text/plain; charset=utf-8')
-  obterRelatorioTexto(@Res() res: Response) {
-    const relatorio = this.reportsService.gerarRelatorio();
-    res.send(relatorio);
-  }
-
-  @Get('json')
-  obterRelatorioJson() {
-    return this.reportsService.gerarRelatorioJson();
-  }
-
-  @Get(':scanId')
-  obterRelatorioPorId(@Param('scanId') scanId: string) {
-    return this.reportsService.gerarRelatorioPorId(scanId);
-  }
 }
